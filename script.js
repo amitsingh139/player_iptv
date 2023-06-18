@@ -1,16 +1,21 @@
-const fs = require('fs');
-const player = require('videojs');
+// Replace with the URL of the .m3u file on GitHub
+const m3uFileUrl = 'Darshan@TataPlay.m3u';
 
-const m3uFile = fs.readFileSync('Darshan@TataPlay.m3u');
-const playlist = JSON.parse(m3uFile);
+// Create an HTML video element
+const video = document.createElement('video');
+video.controls = true; // Show video controls
 
-const playerInstance = player.create('my-player');
+// Append the video element to the document body
+document.body.appendChild(video);
 
-playlist.forEach((item) => {
-  playerInstance.src({
-    src: item.url,
-    type: item.type,
+// Load the .m3u file and play the live stream
+fetch(m3uFileUrl)
+  .then(response => response.text())
+  .then(data => {
+    const streamUrl = data.trim(); // Get the first URL in the .m3u playlist
+    video.src = streamUrl;
+    video.play();
+  })
+  .catch(error => {
+    console.error('Error loading .m3u file:', error);
   });
-});
-
-playerInstance.play();
