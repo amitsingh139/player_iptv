@@ -1,0 +1,22 @@
+/* Style for the channel list */
+#channel-list {
+  width: 300px;
+  height: 40px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Style for the video player */
+#player {
+  width: 100%;
+  height: auto;
+}
+
+/* Optional: Center the IPTV player on the page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
