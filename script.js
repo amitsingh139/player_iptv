@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const searchBox = document.getElementById('search-box');
   const channelList = document.getElementById('channel-list');
   const player = document.getElementById('player');
-  const githubRawURL = 'JIO_DARSHAN2.m3u';
+  const githubRawURL = 'Darshan@TataPlay.m3u';
 
   let channels = [];
 
