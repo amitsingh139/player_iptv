@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const channelList = document.getElementById('channel-list');
   const player = document.getElementById('player');
-  const githubRawURL = 'Darshan@TataPlay.m3u';
+  const githubRawURL = 'Tata Play.m3u';
 
   fetch(githubRawURL)
     .then(response => response.text())
